@@ -69,12 +69,15 @@ name = "pytorch"
 url = "https://download.pytorch.org/whl/nightly/rocm6.0"
 priority = "supplemental"
 
+<<<<<<< HEAD
 
 [[tool.poetry.source]]
 name = "mirrors"
 url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
 priority = "default"
 
+=======
+>>>>>>> e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c
 [tool.ruff]
 # Set the maximum line length to 79.
 line-length = 79
