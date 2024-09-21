@@ -22,11 +22,7 @@ MAX_TOKENS_PER_CHUNK = (
 def get_completion(
     prompt: str,
     system_message: str = "You are a helpful assistant.",
-<<<<<<< HEAD
     model: str = "qwen-turbo",
-=======
-    model: str = "gpt-4-turbo",
->>>>>>> e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c
     temperature: float = 0.3,
     json_mode: bool = False,
 ) -> Union[str, dict]:
@@ -97,17 +93,11 @@ Do not provide any explanations or text apart from the translation.
 {source_lang}: {source_text}
 
 {target_lang}:"""
-<<<<<<< HEAD
     step1="1. Prompt an LLM to translate a text from source_language to target_language"
     ic(step1)
     translation = get_completion(translation_prompt, system_message=system_message)
     ic(translation)
     print("-"*60)
-=======
-
-    translation = get_completion(translation_prompt, system_message=system_message)
-
->>>>>>> e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c
     return translation
 
 
@@ -181,16 +171,11 @@ When writing suggestions, pay attention to whether there are ways to improve the
 Write a list of specific, helpful and constructive suggestions for improving the translation.
 Each suggestion should address one specific part of the translation.
 Output only the suggestions and nothing else."""
-<<<<<<< HEAD
     step2="2. Have the LLM reflect on the translation to come up with constructive suggestions for improving it"
     ic(step2)
     reflection = get_completion(reflection_prompt, system_message=system_message)
     ic(reflection)
     print("-"*60)
-=======
-
-    reflection = get_completion(reflection_prompt, system_message=system_message)
->>>>>>> e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c
     return reflection
 
 
@@ -244,17 +229,11 @@ Please take into account the expert suggestions when editing the translation. Ed
 (v) other errors.
 
 Output only the new translation and nothing else."""
-<<<<<<< HEAD
     step3="3. Use the suggestions to improve the translation"
     ic(step3)
     translation_2 = get_completion(prompt, system_message)
     ic(translation_2)
     print("-"*60)
-=======
-
-    translation_2 = get_completion(prompt, system_message)
-
->>>>>>> e0fc605acbb5d78cb7a58a98bc8bd8f0056df49c
     return translation_2
 
 
